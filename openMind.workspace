@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="openMind" Database="/Users/petebyhre/dev/projects/openMind/.codelite/openMind.tags">
+  <Project Name="matrix" Path="matrix/matrix.project" Active="No"/>
+  <Environment>
+    <![CDATA[]]>
+  </Environment>
+  <Project Name="core" Path="core/core.project"/>
+  <Project Name="UnitTest" Path="UnitTest/UnitTest.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Project Name="matrix" ConfigName="Debug"/>
+      <Project Name="core" ConfigName="Debug"/>
+      <Project Name="UnitTest" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Project Name="matrix" ConfigName="Release"/>
+      <Project Name="core" ConfigName="Release"/>
+      <Project Name="UnitTest" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
