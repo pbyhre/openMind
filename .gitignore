@@ -1,4 +1,7 @@
 *.o
 *.so
-Debug/*
-Release/*
+*/Debug/*
+*/Release/*
+.codelite/*
+.build-debug/*
+.build-release/*
