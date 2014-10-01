@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ UnitTest - Debug ]----------"
-	@cd "UnitTest" && $(MAKE) -f  "UnitTest.mk"
+	@echo "----------Building project:[ math - Debug ]----------"
+	@cd "math" && $(MAKE) -f  "math.mk"
 clean:
-	@echo "----------Cleaning project:[ UnitTest - Debug ]----------"
-	@cd "UnitTest" && $(MAKE) -f  "UnitTest.mk" clean
+	@echo "----------Cleaning project:[ math - Debug ]----------"
+	@cd "math" && $(MAKE) -f  "math.mk" clean

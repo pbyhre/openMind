@@ -4,18 +4,21 @@
   <Environment>
     <![CDATA[]]>
   </Environment>
-  <Project Name="core" Path="core/core.project"/>
+  <Project Name="core" Path="core/core.project" Active="No"/>
   <Project Name="UnitTest" Path="UnitTest/UnitTest.project" Active="Yes"/>
+  <Project Name="math" Path="math/math.project"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Project Name="matrix" ConfigName="Debug"/>
       <Project Name="core" ConfigName="Debug"/>
       <Project Name="UnitTest" ConfigName="Debug"/>
+      <Project Name="math" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Project Name="matrix" ConfigName="Release"/>
       <Project Name="core" ConfigName="Release"/>
       <Project Name="UnitTest" ConfigName="Release"/>
+      <Project Name="math" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>

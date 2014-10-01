@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="UnitTest" InternalType="Console">
   <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
     <Plugin Name="CMakePlugin">
       <![CDATA[[{
   "name": "Debug",
@@ -12,9 +15,6 @@
   "arguments": [],
   "parentProject": ""
  }]]]>
-    </Plugin>
-    <Plugin Name="qmake">
-      <![CDATA[00010001N0005Debug000000000000]]>
     </Plugin>
   </Plugins>
   <Description/>
@@ -40,8 +40,13 @@
       </Compiler>
       <Linker Options="" Required="yes">
         <LibraryPath Value="/Users/petebyhre/dev/gtest-1.7.0/"/>
+        <LibraryPath Value="$(WorkspacePath)/core/Debug"/>
+        <LibraryPath Value="$(WorkspacePath)/math/Debug"/>
         <Library Value="gtest"/>
         <Library Value="gtest_main"/>
+        <Library Value="math"/>
+        <Library Value="core"/>
+        <Library Value="stdc++"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>

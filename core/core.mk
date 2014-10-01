@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Pete Byhre
-Date                   :=2014-09-29
+Date                   :=2014-10-01
 CodeLitePath           :="/Users/petebyhre/Library/Application Support/codelite"
 LinkerName             :=/usr/bin/clang++ 
 SharedObjectLinkerName :=/usr/bin/clang++ -dynamiclib -fPIC
@@ -76,7 +76,7 @@ $(OutputFile): $(Objects)
 	@$(MakeDirCommand) $(@D)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
-	$(AR) $(ArchiveOutputSwitch)$(OutputFile) @$(ObjectsFileList) $(ArLibs)
+	$(AR) $(ArchiveOutputSwitch)$(OutputFile) $(Objects) $(ArLibs)
 	@$(MakeDirCommand) "/Users/petebyhre/dev/projects/openMind/.build-debug"
 	@echo rebuilt > "/Users/petebyhre/dev/projects/openMind/.build-debug/core"
 

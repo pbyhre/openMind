@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Pete Byhre
-Date                   :=2014-09-29
+Date                   :=2014-10-01
 CodeLitePath           :="/Users/petebyhre/Library/Application Support/codelite"
 LinkerName             :=/usr/bin/clang++ 
 SharedObjectLinkerName :=/usr/bin/clang++ -dynamiclib -fPIC
@@ -39,9 +39,9 @@ LinkOptions            :=
 IncludePath            := $(IncludeSwitch)$(WorkspacePath)/include  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)/Users/petebyhre/dev/gtest-1.7.0/include 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)gtest $(LibrarySwitch)gtest_main 
-ArLibs                 :=  "gtest" "gtest_main" 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)/Users/petebyhre/dev/gtest-1.7.0/ 
+Libs                   := $(LibrarySwitch)gtest $(LibrarySwitch)gtest_main $(LibrarySwitch)math $(LibrarySwitch)core $(LibrarySwitch)stdc++ 
+ArLibs                 :=  "gtest" "gtest_main" "math" "core" "stdc++" 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)/Users/petebyhre/dev/gtest-1.7.0/ $(LibraryPathSwitch)$(WorkspacePath)/core/Debug $(LibraryPathSwitch)$(WorkspacePath)/math/Debug 
 
 ##
 ## Common variables
@@ -76,7 +76,7 @@ $(OutputFile): $(IntermediateDirectory)/.d $(Objects)
 	@$(MakeDirCommand) $(@D)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
-	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
+	$(LinkerName) $(OutputSwitch)$(OutputFile) $(Objects) $(LibPath) $(Libs) $(LinkOptions)
 
 $(IntermediateDirectory)/.d:
 	@test -d ./Debug || $(MakeDirCommand) ./Debug
