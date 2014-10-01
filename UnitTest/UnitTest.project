@@ -23,6 +23,16 @@
     <File Name="main.cpp"/>
     <File Name="MatrixTest.cpp"/>
   </VirtualDirectory>
+  <Dependencies Name="Debug">
+    <Project Name="core"/>
+    <Project Name="math"/>
+  </Dependencies>
+  <Dependencies Name="Release">
+    <Project Name="core"/>
+    <Project Name="math"/>
+  </Dependencies>
+  <VirtualDirectory Name="lib"/>
+  <VirtualDirectory Name="include"/>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -34,12 +44,13 @@
       <ResourceCompiler Options=""/>
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="clang( based on LLVM 3.5svn )" DebuggerType="LLDB Debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+      <Compiler Options="-g;-O0;-Wall;--std=c++11 -stdlib=libstdc++" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
-        <IncludePath Value="/Users/petebyhre/dev/gtest-1.7.0/include"/>
+        <IncludePath Value="include"/>
+        <IncludePath Value="$(WorkspacePath)/include"/>
       </Compiler>
       <Linker Options="" Required="yes">
-        <LibraryPath Value="/Users/petebyhre/dev/gtest-1.7.0/"/>
+        <LibraryPath Value="lib"/>
         <LibraryPath Value="$(WorkspacePath)/core/Debug"/>
         <LibraryPath Value="$(WorkspacePath)/math/Debug"/>
         <Library Value="gtest"/>

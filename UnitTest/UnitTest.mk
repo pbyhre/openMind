@@ -5,8 +5,8 @@
 ## Debug
 ProjectName            :=UnitTest
 ConfigurationName      :=Debug
-WorkspacePath          := "/Users/petebyhre/dev/projects/openMind"
-ProjectPath            := "/Users/petebyhre/dev/projects/openMind/UnitTest"
+WorkspacePath          := "/Users/pbyhre/dev/projects/pb/openMind"
+ProjectPath            := "/Users/pbyhre/dev/projects/pb/openMind/UnitTest"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -14,7 +14,7 @@ CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Pete Byhre
 Date                   :=2014-10-01
-CodeLitePath           :="/Users/petebyhre/Library/Application Support/codelite"
+CodeLitePath           :="/Users/pbyhre/Library/Application Support/codelite"
 LinkerName             :=/usr/bin/clang++ 
 SharedObjectLinkerName :=/usr/bin/clang++ -dynamiclib -fPIC
 ObjectSuffix           :=.o
@@ -36,12 +36,12 @@ ObjectsFileList        :="UnitTest.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
-IncludePath            := $(IncludeSwitch)$(WorkspacePath)/include  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)/Users/petebyhre/dev/gtest-1.7.0/include 
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)include $(IncludeSwitch)$(WorkspacePath)/include 
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := $(LibrarySwitch)gtest $(LibrarySwitch)gtest_main $(LibrarySwitch)math $(LibrarySwitch)core $(LibrarySwitch)stdc++ 
 ArLibs                 :=  "gtest" "gtest_main" "math" "core" "stdc++" 
-LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)/Users/petebyhre/dev/gtest-1.7.0/ $(LibraryPathSwitch)$(WorkspacePath)/core/Debug $(LibraryPathSwitch)$(WorkspacePath)/math/Debug 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)lib $(LibraryPathSwitch)$(WorkspacePath)/core/Debug $(LibraryPathSwitch)$(WorkspacePath)/math/Debug 
 
 ##
 ## Common variables
@@ -50,7 +50,7 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)/Users/peteb
 AR       := /usr/bin/ar rcu
 CXX      := /usr/bin/clang++ 
 CC       := /usr/bin/clang 
-CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall --std=c++11 -stdlib=libstdc++ $(Preprocessors)
 CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ASFLAGS  := 
 AS       := /usr/bin/as 
@@ -59,7 +59,7 @@ AS       := /usr/bin/as
 ##
 ## User defined environment variables
 ##
-CodeLiteDir:=/Users/petebyhre/Downloads/codelite.app/Contents/SharedSupport/
+CodeLiteDir:=/Users/pbyhre/Downloads/codelite.app/Contents/SharedSupport/
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/MatrixTest.cpp$(ObjectSuffix) 
 
 
@@ -72,11 +72,23 @@ Objects=$(Objects0)
 .PHONY: all clean PreBuild PrePreBuild PostBuild
 all: $(OutputFile)
 
-$(OutputFile): $(IntermediateDirectory)/.d $(Objects) 
+$(OutputFile): $(IntermediateDirectory)/.d "../.build-debug/core" "../.build-debug/math" $(Objects) 
 	@$(MakeDirCommand) $(@D)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) $(Objects) $(LibPath) $(Libs) $(LinkOptions)
+
+"../.build-debug/core":
+	@$(MakeDirCommand) "../.build-debug"
+	@echo stam > "../.build-debug/core"
+
+
+"../.build-debug/math":
+	@$(MakeDirCommand) "../.build-debug"
+	@echo stam > "../.build-debug/math"
+
+
+
 
 $(IntermediateDirectory)/.d:
 	@test -d ./Debug || $(MakeDirCommand) ./Debug
@@ -88,7 +100,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/petebyhre/dev/projects/openMind/UnitTest/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/pbyhre/dev/projects/pb/openMind/UnitTest/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM "main.cpp"
 
@@ -96,7 +108,7 @@ $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) "main.cpp"
 
 $(IntermediateDirectory)/MatrixTest.cpp$(ObjectSuffix): MatrixTest.cpp $(IntermediateDirectory)/MatrixTest.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/petebyhre/dev/projects/openMind/UnitTest/MatrixTest.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/MatrixTest.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/pbyhre/dev/projects/pb/openMind/UnitTest/MatrixTest.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/MatrixTest.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/MatrixTest.cpp$(DependSuffix): MatrixTest.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/MatrixTest.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/MatrixTest.cpp$(DependSuffix) -MM "MatrixTest.cpp"
 

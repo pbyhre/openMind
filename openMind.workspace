@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="openMind" Database="/Users/petebyhre/dev/projects/openMind/.codelite/openMind.tags">
-  <Project Name="matrix" Path="matrix/matrix.project" Active="No"/>
   <Environment>
     <![CDATA[]]>
   </Environment>
