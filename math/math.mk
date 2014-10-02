@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Pete Byhre
-Date                   :=2014-10-01
+Date                   :=2014-10-02
 CodeLitePath           :="/Users/pbyhre/Library/Application Support/codelite"
 LinkerName             :=/usr/bin/clang++ 
 SharedObjectLinkerName :=/usr/bin/clang++ -dynamiclib -fPIC
@@ -60,11 +60,9 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/Users/pbyhre/Downloads/codelite.app/Contents/SharedSupport/
-Objects0=$(IntermediateDirectory)/Matrix.cpp$(ObjectSuffix) 
 
 
-
-Objects=$(Objects0) 
+Objects=
 
 ##
 ## Main Build Targets 
@@ -75,7 +73,6 @@ all: $(IntermediateDirectory) $(OutputFile)
 $(OutputFile): $(Objects)
 	@$(MakeDirCommand) $(@D)
 	@echo "" > $(IntermediateDirectory)/.d
-	@echo $(Objects0)  > $(ObjectsFileList)
 	$(AR) $(ArchiveOutputSwitch)$(OutputFile) $(Objects) $(ArLibs)
 	@$(MakeDirCommand) "/Users/pbyhre/dev/projects/pb/openMind/.build-debug"
 	@echo rebuilt > "/Users/pbyhre/dev/projects/pb/openMind/.build-debug/math"
@@ -89,14 +86,6 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/Matrix.cpp$(ObjectSuffix): Matrix.cpp $(IntermediateDirectory)/Matrix.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/pbyhre/dev/projects/pb/openMind/math/Matrix.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Matrix.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Matrix.cpp$(DependSuffix): Matrix.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Matrix.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Matrix.cpp$(DependSuffix) -MM "Matrix.cpp"
-
-$(IntermediateDirectory)/Matrix.cpp$(PreprocessSuffix): Matrix.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Matrix.cpp$(PreprocessSuffix) "Matrix.cpp"
-
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
 ##

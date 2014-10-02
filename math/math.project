@@ -28,9 +28,7 @@
   </Plugins>
   <Description/>
   <Dependencies/>
-  <VirtualDirectory Name="src">
-    <File Name="Matrix.cpp"/>
-  </VirtualDirectory>
+  <VirtualDirectory Name="src"/>
   <VirtualDirectory Name="include"/>
   <Settings Type="Static Library">
     <GlobalSettings>

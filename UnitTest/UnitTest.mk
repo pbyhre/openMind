@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Pete Byhre
-Date                   :=2014-10-01
+Date                   :=2014-10-02
 CodeLitePath           :="/Users/pbyhre/Library/Application Support/codelite"
 LinkerName             :=/usr/bin/clang++ 
 SharedObjectLinkerName :=/usr/bin/clang++ -dynamiclib -fPIC
@@ -39,8 +39,8 @@ LinkOptions            :=
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)include $(IncludeSwitch)$(WorkspacePath)/include 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)gtest $(LibrarySwitch)gtest_main $(LibrarySwitch)math $(LibrarySwitch)core $(LibrarySwitch)stdc++ 
-ArLibs                 :=  "gtest" "gtest_main" "math" "core" "stdc++" 
+Libs                   := $(LibrarySwitch)gtest $(LibrarySwitch)gtest_main $(LibrarySwitch)core 
+ArLibs                 :=  "gtest" "gtest_main" "core" 
 LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)lib $(LibraryPathSwitch)$(WorkspacePath)/core/Debug $(LibraryPathSwitch)$(WorkspacePath)/math/Debug 
 
 ##
@@ -50,7 +50,7 @@ LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)lib $(Librar
 AR       := /usr/bin/ar rcu
 CXX      := /usr/bin/clang++ 
 CC       := /usr/bin/clang 
-CXXFLAGS :=  -g -O0 -Wall --std=c++11 -stdlib=libstdc++ $(Preprocessors)
+CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
 CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ASFLAGS  := 
 AS       := /usr/bin/as 
@@ -72,7 +72,7 @@ Objects=$(Objects0)
 .PHONY: all clean PreBuild PrePreBuild PostBuild
 all: $(OutputFile)
 
-$(OutputFile): $(IntermediateDirectory)/.d "../.build-debug/core" "../.build-debug/math" $(Objects) 
+$(OutputFile): $(IntermediateDirectory)/.d "../.build-debug/core" $(Objects) 
 	@$(MakeDirCommand) $(@D)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
@@ -81,11 +81,6 @@ $(OutputFile): $(IntermediateDirectory)/.d "../.build-debug/core" "../.build-deb
 "../.build-debug/core":
 	@$(MakeDirCommand) "../.build-debug"
 	@echo stam > "../.build-debug/core"
-
-
-"../.build-debug/math":
-	@$(MakeDirCommand) "../.build-debug"
-	@echo stam > "../.build-debug/math"
 
 
 

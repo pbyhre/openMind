@@ -23,15 +23,14 @@
     <File Name="main.cpp"/>
     <File Name="MatrixTest.cpp"/>
   </VirtualDirectory>
-  <Dependencies Name="Debug">
-    <Project Name="core"/>
-    <Project Name="math"/>
-  </Dependencies>
   <Dependencies Name="Release">
     <Project Name="core"/>
     <Project Name="math"/>
   </Dependencies>
-  <VirtualDirectory Name="lib"/>
+  <VirtualDirectory Name="lib">
+    <File Name="lib/libgtest_main.a"/>
+    <File Name="lib/libgtest.a"/>
+  </VirtualDirectory>
   <VirtualDirectory Name="include"/>
   <Settings Type="Executable">
     <GlobalSettings>
@@ -44,7 +43,7 @@
       <ResourceCompiler Options=""/>
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="clang( based on LLVM 3.5svn )" DebuggerType="LLDB Debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-g;-O0;-Wall;--std=c++11 -stdlib=libstdc++" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
         <IncludePath Value="include"/>
         <IncludePath Value="$(WorkspacePath)/include"/>
@@ -55,9 +54,7 @@
         <LibraryPath Value="$(WorkspacePath)/math/Debug"/>
         <Library Value="gtest"/>
         <Library Value="gtest_main"/>
-        <Library Value="math"/>
         <Library Value="core"/>
-        <Library Value="stdc++"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
@@ -132,4 +129,7 @@
       </Completion>
     </Configuration>
   </Settings>
+  <Dependencies Name="Debug">
+    <Project Name="core"/>
+  </Dependencies>
 </CodeLite_Project>
