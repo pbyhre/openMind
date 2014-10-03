@@ -41,4 +41,14 @@ TEST_F(MatrixTest, IsEmptyInitially)
 	
 	EXPECT_EQ(0, m.getRowCount()) << "Rows should be 0 for empty matrix";
 	EXPECT_EQ(0, m.getColCount()) << "Cols should be 0 for empty matrix";
+	try
+	{
+		m.set(0, 0, 10);
+		ASSERT_FALSE(true) << "InvalidCellException should have been thrown";
+	}
+	catch (openMind::exception::InvalidCellException& ex)
+	{
+		EXPECT_EQ(0, ex.getRow()) << "Row should be 0";
+		EXPECT_EQ(0, ex.getCol()) << "Col should be 0";
+	}
 }

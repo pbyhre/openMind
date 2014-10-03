@@ -3,6 +3,8 @@
 
 #pragma once
 
+#include <openMind/exception/InvalidCellException.h>
+
 namespace openMind
 {
 
@@ -92,7 +94,7 @@ class Matrix
 		{
 			if (row >= m_rows || col >= m_cols)
 			{
-				
+				throw openMind::exception::InvalidCellException(row, col);
 			}
 			return m_matrix[m_cols*row + col];
 		}
@@ -101,7 +103,7 @@ class Matrix
 		{
 			if (row >= m_rows || col >= m_cols)
 			{
-				
+				throw openMind::exception::InvalidCellException(row, col);
 			}
 			return m_matrix[m_cols*row + col];
 		}
@@ -110,7 +112,7 @@ class Matrix
 		{
 			if (row >= m_rows || col >= m_cols)
 			{
-				
+				throw openMind::exception::InvalidCellException(row, col);
 			}
 			m_matrix[m_cols*row + col] = value;
 		}

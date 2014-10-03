@@ -7,19 +7,24 @@ namespace openMind
 namespace exception
 {
 
+const std::string UNKNOWN_EXCEPTION = "exception.unknown";
+
 Exception::Exception()
 {
+	setCode(UNKNOWN_EXCEPTION);
 	m_nested_exception = NULL;
 }
 
 Exception::Exception(const std::string& code)
 {
+	setCode(UNKNOWN_EXCEPTION);
 	m_nested_exception = NULL;
 	m_code = code;
 }
 
 Exception::Exception(const std::string& code, const std::vector<std::string>& args)
 {
+	setCode(UNKNOWN_EXCEPTION);
 	m_nested_exception = NULL;
 	m_code = code;
 	m_args = args;
@@ -27,12 +32,14 @@ Exception::Exception(const std::string& code, const std::vector<std::string>& ar
 
 Exception::Exception(const std::string& code, const Exception& ex)
 {
+	setCode(UNKNOWN_EXCEPTION);
 	setNestedException(ex);
 	m_code = code;
 }
 
 Exception::Exception(const std::string& code, const std::vector<std::string>& args, const Exception& ex)
 {
+	setCode(UNKNOWN_EXCEPTION);
 	setNestedException(ex);
 	m_code = code;
 	m_args = args;

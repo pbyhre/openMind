@@ -5,8 +5,8 @@
 ## Debug
 ProjectName            :=UnitTest
 ConfigurationName      :=Debug
-WorkspacePath          := "/Users/petebyhre/dev/projects/openMind"
-ProjectPath            := "/Users/petebyhre/dev/projects/openMind/UnitTest"
+WorkspacePath          := "/Users/pbyhre/dev/projects/pb/openMind"
+ProjectPath            := "/Users/pbyhre/dev/projects/pb/openMind/UnitTest"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -14,7 +14,7 @@ CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Pete Byhre
 Date                   :=2014-10-03
-CodeLitePath           :="/Users/petebyhre/Library/Application Support/codelite"
+CodeLitePath           :="/Users/pbyhre/Library/Application Support/codelite"
 LinkerName             :=/usr/bin/clang++ 
 SharedObjectLinkerName :=/usr/bin/clang++ -dynamiclib -fPIC
 ObjectSuffix           :=.o
@@ -36,11 +36,11 @@ ObjectsFileList        :="UnitTest.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
-IncludePath            := $(IncludeSwitch)$(WorkspacePath)/include  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)include $(IncludeSwitch)$(WorkspacePath)/include 
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)include $(IncludeSwitch)$(WorkspacePath)/include 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := $(LibrarySwitch)gtest $(LibrarySwitch)gtest_main $(LibrarySwitch)core 
-ArLibs                 :=  "gtest" "gtest_main" "core" 
+Libs                   := $(LibrarySwitch)gtest $(LibrarySwitch)gtest_main $(LibrarySwitch)core $(LibrarySwitch)math 
+ArLibs                 :=  "gtest" "gtest_main" "core" "math" 
 LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)lib $(LibraryPathSwitch)$(WorkspacePath)/core/Debug $(LibraryPathSwitch)$(WorkspacePath)/math/Debug 
 
 ##
@@ -59,7 +59,7 @@ AS       := /usr/bin/as
 ##
 ## User defined environment variables
 ##
-CodeLiteDir:=/Users/petebyhre/Downloads/codelite.app/Contents/SharedSupport/
+CodeLiteDir:=/Users/pbyhre/Downloads/codelite.app/Contents/SharedSupport/
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/MatrixTest.cpp$(ObjectSuffix) 
 
 
@@ -95,7 +95,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/petebyhre/dev/projects/openMind/UnitTest/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/pbyhre/dev/projects/pb/openMind/UnitTest/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM "main.cpp"
 
@@ -103,7 +103,7 @@ $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) "main.cpp"
 
 $(IntermediateDirectory)/MatrixTest.cpp$(ObjectSuffix): MatrixTest.cpp $(IntermediateDirectory)/MatrixTest.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/petebyhre/dev/projects/openMind/UnitTest/MatrixTest.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/MatrixTest.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/pbyhre/dev/projects/pb/openMind/UnitTest/MatrixTest.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/MatrixTest.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/MatrixTest.cpp$(DependSuffix): MatrixTest.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/MatrixTest.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/MatrixTest.cpp$(DependSuffix) -MM "MatrixTest.cpp"
 
