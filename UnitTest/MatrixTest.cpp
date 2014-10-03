@@ -37,11 +37,8 @@ class MatrixTest : public ::testing::Test
 
 TEST_F(MatrixTest, IsEmptyInitially) 
 {
-	for (int i=0; i<ROWS; i++)
-	{
-		for (int j=0; j<COLS; j++)
-		{
-			EXPECT_EQ(i+j, m_long_matrix->get(i, j));
-		}
-	}
+	openMind::math::Matrix<long> m;
+	
+	EXPECT_EQ(0, m.getRowCount()) << "Rows should be 0 for empty matrix";
+	EXPECT_EQ(0, m.getColCount()) << "Cols should be 0 for empty matrix";
 }
