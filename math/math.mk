@@ -5,16 +5,16 @@
 ## Debug
 ProjectName            :=math
 ConfigurationName      :=Debug
-WorkspacePath          := "/Users/pbyhre/dev/projects/pb/openMind"
-ProjectPath            := "/Users/pbyhre/dev/projects/pb/openMind/math"
+WorkspacePath          := "/Users/petebyhre/dev/projects/openMind"
+ProjectPath            := "/Users/petebyhre/dev/projects/openMind/math"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Pete Byhre
-Date                   :=2014-10-03
-CodeLitePath           :="/Users/pbyhre/Library/Application Support/codelite"
+Date                   :=2014-10-04
+CodeLitePath           :="/Users/petebyhre/Library/Application Support/codelite"
 LinkerName             :=/usr/bin/clang++ 
 SharedObjectLinkerName :=/usr/bin/clang++ -dynamiclib -fPIC
 ObjectSuffix           :=.o
@@ -36,7 +36,7 @@ ObjectsFileList        :="math.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=mkdir -p
 LinkOptions            :=  
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)$(WorkspacePath)/include 
+IncludePath            := $(IncludeSwitch)$(WorkspacePath)/include  $(IncludeSwitch). $(IncludeSwitch). $(IncludeSwitch)$(WorkspacePath)/include 
 IncludePCH             := 
 RcIncludePath          := 
 Libs                   := 
@@ -59,8 +59,8 @@ AS       := /usr/bin/as
 ##
 ## User defined environment variables
 ##
-CodeLiteDir:=/Users/pbyhre/Downloads/codelite.app/Contents/SharedSupport/
-Objects0=$(IntermediateDirectory)/InvalidCellException.cpp$(ObjectSuffix) 
+CodeLiteDir:=/Users/petebyhre/Downloads/codelite.app/Contents/SharedSupport/
+Objects0=$(IntermediateDirectory)/InvalidCellException.cpp$(ObjectSuffix) $(IntermediateDirectory)/IncompatableMatrixException.cpp$(ObjectSuffix) 
 
 
 
@@ -77,8 +77,8 @@ $(OutputFile): $(Objects)
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(AR) $(ArchiveOutputSwitch)$(OutputFile) $(Objects) $(ArLibs)
-	@$(MakeDirCommand) "/Users/pbyhre/dev/projects/pb/openMind/.build-debug"
-	@echo rebuilt > "/Users/pbyhre/dev/projects/pb/openMind/.build-debug/math"
+	@$(MakeDirCommand) "/Users/petebyhre/dev/projects/openMind/.build-debug"
+	@echo rebuilt > "/Users/petebyhre/dev/projects/openMind/.build-debug/math"
 
 ./Debug:
 	@test -d ./Debug || $(MakeDirCommand) ./Debug
@@ -90,12 +90,20 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/InvalidCellException.cpp$(ObjectSuffix): InvalidCellException.cpp $(IntermediateDirectory)/InvalidCellException.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/pbyhre/dev/projects/pb/openMind/math/InvalidCellException.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/InvalidCellException.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/petebyhre/dev/projects/openMind/math/InvalidCellException.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/InvalidCellException.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/InvalidCellException.cpp$(DependSuffix): InvalidCellException.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/InvalidCellException.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/InvalidCellException.cpp$(DependSuffix) -MM "InvalidCellException.cpp"
 
 $(IntermediateDirectory)/InvalidCellException.cpp$(PreprocessSuffix): InvalidCellException.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/InvalidCellException.cpp$(PreprocessSuffix) "InvalidCellException.cpp"
+
+$(IntermediateDirectory)/IncompatableMatrixException.cpp$(ObjectSuffix): IncompatableMatrixException.cpp $(IntermediateDirectory)/IncompatableMatrixException.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/Users/petebyhre/dev/projects/openMind/math/IncompatableMatrixException.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/IncompatableMatrixException.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/IncompatableMatrixException.cpp$(DependSuffix): IncompatableMatrixException.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/IncompatableMatrixException.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/IncompatableMatrixException.cpp$(DependSuffix) -MM "IncompatableMatrixException.cpp"
+
+$(IntermediateDirectory)/IncompatableMatrixException.cpp$(PreprocessSuffix): IncompatableMatrixException.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/IncompatableMatrixException.cpp$(PreprocessSuffix) "IncompatableMatrixException.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

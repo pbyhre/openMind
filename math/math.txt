@@ -1,1 +1,1 @@
-./Debug/InvalidCellException.cpp.o
+./Debug/InvalidCellException.cpp.o ./Debug/IncompatableMatrixException.cpp.o

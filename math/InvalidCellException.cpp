@@ -1,4 +1,4 @@
-#include "InvalidCellException.h"
+#include <openMind/exception/InvalidCellException.h>
 
 namespace openMind
 {
@@ -9,13 +9,13 @@ namespace exception
 const std::string INVALID_CELL_EXCEPTION = "exception.invalid.cell";
 
 InvalidCellException::InvalidCellException()
-:Exception(INVALID_CELL_EXCEPTION);
+:Exception(INVALID_CELL_EXCEPTION)
 {
 	setCell(0, 0);
 }
 
 InvalidCellException::InvalidCellException(unsigned int row, unsigned int col)
-:Exception(INVALID_CELL_EXCEPTION);
+:Exception(INVALID_CELL_EXCEPTION)
 {
 	setCell(row, col);
 }
