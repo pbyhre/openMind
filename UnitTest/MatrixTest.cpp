@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <openMind/math/Matrix.h>
+#include <openMind/exception/InvalidCellException.h>
 
 const unsigned int ROWS = 3;
 const unsigned int COLS = 2;
@@ -11,7 +12,7 @@ class MatrixTest : public ::testing::Test
 	protected:
 		virtual void SetUp() 
 		{
-			m_long_matrix = new Matrix<long>(ROWS, COLS);
+			m_long_matrix = new Matrix(ROWS, COLS);
 			for (int i=0; i<ROWS; i++)
 			{
 				for (int j=0; j<COLS; j++)
@@ -31,15 +32,15 @@ class MatrixTest : public ::testing::Test
 			}
 		}
 
-	openMind::math::Matrix<long>*	m_long_matrix;
+	openMind::math::Matrix*	m_long_matrix;
 	//openMind::math::Matrix<double>	m_double_matrix(ROWS,COLS);
 };
 
 TEST(MatrixTest, MultiplyLong) 
 {
-	Matrix<long> m1(3, 2);
-	Matrix<long> m2(2, 3);
-	Matrix<long> result(3, 3);
+	Matrix m1(3, 2);
+	Matrix m2(2, 3);
+	Matrix result(3, 3);
 	
 	m1.set(0, 0, 1);
 	m1.set(1, 0, 2);
@@ -73,9 +74,9 @@ TEST(MatrixTest, MultiplyLong)
 
 TEST(MatrixTest, IdentityMatrix) 
 {
-	Matrix<long> m1 = Matrix<long>::createIdentityMatrix(3);
+	Matrix m1 = Matrix::createIdentityMatrix(3);
 	
-	Matrix<long> result(3, 3);
+	Matrix result(3, 3);
 	
 	result.set(0, 0, 47);
 	result.set(0, 1, 52);
@@ -95,8 +96,8 @@ TEST(MatrixTest, IdentityMatrix)
 
 TEST(MatrixTest, TransposeMatrix) 
 {
-	Matrix<long> m1(3, 2);
-	Matrix<long> m2(2, 3);
+	Matrix m1(3, 2);
+	Matrix m2(2, 3);
 	
 	m1.set(0, 0, 1);
 	m1.set(1, 0, 3);
@@ -112,7 +113,7 @@ TEST(MatrixTest, TransposeMatrix)
 	m2.set(1, 1, 4);
 	m2.set(1, 2, 6);
 	
-	Matrix<long> result = m1.transpose();
+	Matrix result = m1.transpose();
 	EXPECT_EQ(result, m2);
 	
 	result = result.transpose();
@@ -121,7 +122,7 @@ TEST(MatrixTest, TransposeMatrix)
 
 TEST(MatrixTest, EmptyConstructorLong) 
 {
-	openMind::math::Matrix<long> m;
+	openMind::math::Matrix m;
 	
 	EXPECT_EQ(0, m.getRowCount()) << "Rows should be 0 for empty matrix";
 	EXPECT_EQ(0, m.getColCount()) << "Cols should be 0 for empty matrix";
@@ -139,7 +140,7 @@ TEST(MatrixTest, EmptyConstructorLong)
 
 TEST(MatrixTest, 3x2Long) 
 {
-	openMind::math::Matrix<long> m(3,2);
+	openMind::math::Matrix m(3,2);
 	
 	EXPECT_EQ(3, m.getRowCount()) << "Rows should be 3 for empty matrix";
 	EXPECT_EQ(2, m.getColCount()) << "Cols should be 2 for empty matrix";
@@ -174,7 +175,7 @@ TEST(MatrixTest, 3x2Long)
 // double
 TEST(MatrixTest, EmptyConstructorDouble) 
 {
-	openMind::math::Matrix<double> m;
+	openMind::math::Matrix m;
 	
 	EXPECT_EQ(0, m.getRowCount()) << "Rows should be 0 for empty matrix";
 	EXPECT_EQ(0, m.getColCount()) << "Cols should be 0 for empty matrix";
@@ -193,7 +194,7 @@ TEST(MatrixTest, EmptyConstructorDouble)
 TEST(MatrixTest, 3x2Double) 
 {
 	double multiplier = 2.123456;
-	openMind::math::Matrix<double> m(3,2);
+	openMind::math::Matrix m(3,2);
 	
 	EXPECT_EQ(3, m.getRowCount()) << "Rows should be 3 for empty matrix";
 	EXPECT_EQ(2, m.getColCount()) << "Cols should be 2 for empty matrix";

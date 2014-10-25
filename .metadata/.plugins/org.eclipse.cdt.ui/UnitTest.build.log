@@ -1,0 +1,10 @@
+12:13:47 **** Incremental Build of configuration Debug for project UnitTest ****
+make all 
+Building target: UnitTest
+Invoking: MacOS X C++ Linker
+g++ -L"/Users/petebyhre/dev/projects/openMind/UnitTest/lib" -L/Users/petebyhre/dev/projects/openMind/Debug -o "UnitTest"  ./HopfieldTest.o ./MatrixTest.o ./main.o   -lgtest -lcore -lneuralnet -lmath -lgtest_main
+Finished building target: UnitTest
+ 
+
+12:13:47 Build Finished (took 269ms)
+

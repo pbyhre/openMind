@@ -1,0 +1,356 @@
+\hypertarget{classopen_mind_1_1math_1_1_matrix}{\section{open\+Mind\+:\+:math\+:\+:Matrix Class Reference}
+\label{classopen_mind_1_1math_1_1_matrix}\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+}
+
+
+{\ttfamily \#include $<$Matrix.\+h$>$}
+
+Inheritance diagram for open\+Mind\+:\+:math\+:\+:Matrix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classopen_mind_1_1math_1_1_matrix}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix_a54bf6fe1b67273f245745854ab588e61}{Matrix} ()
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix_a88a85487471031c0370a88de3ea50378}{Matrix} (unsigned int rows, unsigned int cols)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix_aeb902d965006e63260fbe15b01e41026}{Matrix} (const \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \&m)
+\item 
+virtual \hyperlink{classopen_mind_1_1math_1_1_matrix_a6a6be308181cc5c1319261fb9461fd54}{$\sim$\+Matrix} ()
+\item 
+bool \hyperlink{classopen_mind_1_1math_1_1_matrix_a70cc7f8934cb5f3298135f31137e5fa0}{is\+Vector} () const 
+\item 
+double \hyperlink{classopen_mind_1_1math_1_1_matrix_acdfc93d350df555ae725fddebc133c11}{dot\+Product} (const \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \&value) const 
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classopen_mind_1_1math_1_1_matrix_a34f7a0d6dbe7c9d6848e007268ccab13}{to\+Vector} () const 
+\item 
+unsigned int \hyperlink{classopen_mind_1_1math_1_1_matrix_ad567b12966ba791cc4158b02853615f1}{vector\+Length} () const 
+\item 
+bool \hyperlink{classopen_mind_1_1math_1_1_matrix_a6d7ef90c143858bf74c4fc11e7ec633b}{operator==} (const \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \&m) const 
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \& \hyperlink{classopen_mind_1_1math_1_1_matrix_a04d19b5568c543101a2053d2c400b2c5}{operator=} (const \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \&m)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \& \hyperlink{classopen_mind_1_1math_1_1_matrix_a000b390ebb8fb9af8859023253df1eb0}{operator+=} (double value)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \& \hyperlink{classopen_mind_1_1math_1_1_matrix_aea27f33793c79d874ddf7d334e3d63c3}{operator+=} (const \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \&value)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \& \hyperlink{classopen_mind_1_1math_1_1_matrix_abfedb905902c2b10218a6e61980f42fc}{operator-\/=} (double value)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \& \hyperlink{classopen_mind_1_1math_1_1_matrix_a9137b8be9250fbf25505980ad5f0f539}{operator-\/=} (const \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \&value)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \& \hyperlink{classopen_mind_1_1math_1_1_matrix_a2cfce379d6cddcfa26e31b955922c90e}{operator$\ast$=} (double value)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \& \hyperlink{classopen_mind_1_1math_1_1_matrix_a5ff127cb2653a33f6e659b327e347afc}{operator$\ast$=} (const \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \&value)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \& \hyperlink{classopen_mind_1_1math_1_1_matrix_ad7cbc2685d02bed36204c8b40c2f721e}{operator/=} (double value)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \hyperlink{classopen_mind_1_1math_1_1_matrix_a2718e2c4da026a84d768459939e79089}{operator+} (const \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \&value)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \hyperlink{classopen_mind_1_1math_1_1_matrix_a25fc9903b13803b93056f3e823feb835}{operator$\ast$} (double value)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \hyperlink{classopen_mind_1_1math_1_1_matrix_a152466da10b2bc6d675c6a0cdaeebaa2}{operator$\ast$} (const \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \&value)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \hyperlink{classopen_mind_1_1math_1_1_matrix_a3c2f863cb867dc3ee52e9806c04ae32c}{operator/} (double value)
+\item 
+void \hyperlink{classopen_mind_1_1math_1_1_matrix_a6d44effc5284193d37308b8cb4395130}{resize} (unsigned int rows, unsigned int cols)
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \hyperlink{classopen_mind_1_1math_1_1_matrix_aed8d62933076a5abad1263a99a2cb846}{transpose} () const 
+\item 
+unsigned int \hyperlink{classopen_mind_1_1math_1_1_matrix_a1f73721fe2824cdacb6f7af157621561}{get\+Row\+Count} () const 
+\item 
+unsigned int \hyperlink{classopen_mind_1_1math_1_1_matrix_a77aed5a66ee4b1be653e78a147cea85b}{get\+Col\+Count} () const 
+\item 
+double \& \hyperlink{classopen_mind_1_1math_1_1_matrix_aa1ac603bc50f58e1a081054a43c83cf5}{get} (unsigned int row, unsigned int col)
+\item 
+double \hyperlink{classopen_mind_1_1math_1_1_matrix_ac5042751f09bb28fd0ed6665eb57efcb}{get} (unsigned int row, unsigned int col) const 
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \hyperlink{classopen_mind_1_1math_1_1_matrix_afe8cd77ce42f8b9bb0c71c09f110f4c7}{get\+Column} (unsigned int col) const 
+\item 
+\hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \hyperlink{classopen_mind_1_1math_1_1_matrix_ac715d1ae670ca0a58d6ad77958dba814}{get\+Row} (unsigned int row) const 
+\item 
+virtual void \hyperlink{classopen_mind_1_1math_1_1_matrix_a15b18dbaa991db26b1efbcf347c65172}{set} (unsigned int row, unsigned int col, double value)
+\item 
+void \hyperlink{classopen_mind_1_1math_1_1_matrix_a4240e718f22e8ebd4eed3715857458d1}{clear} ()
+\item 
+bool \hyperlink{classopen_mind_1_1math_1_1_matrix_afb4e025f38dfd297dfa9d502ff711b85}{is\+Zero} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \hyperlink{classopen_mind_1_1math_1_1_matrix_aea14d43a85554a590973fa1d6f30a9fb}{create\+Identity\+Matrix} (unsigned int size)
+\item 
+static \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \hyperlink{classopen_mind_1_1math_1_1_matrix_a308ed58506f0de62b4a9550769ee81c2}{create\+Column\+Vector} (unsigned int size)
+\item 
+static \hyperlink{classopen_mind_1_1math_1_1_matrix}{Matrix} \hyperlink{classopen_mind_1_1math_1_1_matrix_a09a4329970ba58398b1af8aa2e3c8f9b}{create\+Row\+Vector} (unsigned int size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a54bf6fe1b67273f245745854ab588e61}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}open\+Mind\+::math\+::\+Matrix\+::\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a54bf6fe1b67273f245745854ab588e61}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a88a85487471031c0370a88de3ea50378}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}open\+Mind\+::math\+::\+Matrix\+::\+Matrix (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{rows, }
+\item[{unsigned int}]{cols}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a88a85487471031c0370a88de3ea50378}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_aeb902d965006e63260fbe15b01e41026}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{Matrix}]{\setlength{\rightskip}{0pt plus 5cm}open\+Mind\+::math\+::\+Matrix\+::\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix} \&}]{m}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_aeb902d965006e63260fbe15b01e41026}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a6a6be308181cc5c1319261fb9461fd54}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!````~Matrix@{$\sim$\+Matrix}}
+\index{````~Matrix@{$\sim$\+Matrix}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{$\sim$\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}open\+Mind\+::math\+::\+Matrix\+::$\sim$\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classopen_mind_1_1math_1_1_matrix_a6a6be308181cc5c1319261fb9461fd54}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a4240e718f22e8ebd4eed3715857458d1}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!clear@{clear}}
+\index{clear@{clear}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void open\+Mind\+::math\+::\+Matrix\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a4240e718f22e8ebd4eed3715857458d1}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a308ed58506f0de62b4a9550769ee81c2}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!create\+Column\+Vector@{create\+Column\+Vector}}
+\index{create\+Column\+Vector@{create\+Column\+Vector}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{create\+Column\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} open\+Mind\+::math\+::\+Matrix\+::create\+Column\+Vector (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classopen_mind_1_1math_1_1_matrix_a308ed58506f0de62b4a9550769ee81c2}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_aea14d43a85554a590973fa1d6f30a9fb}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!create\+Identity\+Matrix@{create\+Identity\+Matrix}}
+\index{create\+Identity\+Matrix@{create\+Identity\+Matrix}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{create\+Identity\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} open\+Mind\+::math\+::\+Matrix\+::create\+Identity\+Matrix (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classopen_mind_1_1math_1_1_matrix_aea14d43a85554a590973fa1d6f30a9fb}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a09a4329970ba58398b1af8aa2e3c8f9b}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!create\+Row\+Vector@{create\+Row\+Vector}}
+\index{create\+Row\+Vector@{create\+Row\+Vector}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{create\+Row\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} open\+Mind\+::math\+::\+Matrix\+::create\+Row\+Vector (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classopen_mind_1_1math_1_1_matrix_a09a4329970ba58398b1af8aa2e3c8f9b}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_acdfc93d350df555ae725fddebc133c11}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!dot\+Product@{dot\+Product}}
+\index{dot\+Product@{dot\+Product}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{dot\+Product}]{\setlength{\rightskip}{0pt plus 5cm}double open\+Mind\+::math\+::\+Matrix\+::dot\+Product (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix} \&}]{value}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_acdfc93d350df555ae725fddebc133c11}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_aa1ac603bc50f58e1a081054a43c83cf5}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!get@{get}}
+\index{get@{get}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}double \& open\+Mind\+::math\+::\+Matrix\+::get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row, }
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_aa1ac603bc50f58e1a081054a43c83cf5}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_ac5042751f09bb28fd0ed6665eb57efcb}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!get@{get}}
+\index{get@{get}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}double open\+Mind\+::math\+::\+Matrix\+::get (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row, }
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_ac5042751f09bb28fd0ed6665eb57efcb}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a77aed5a66ee4b1be653e78a147cea85b}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!get\+Col\+Count@{get\+Col\+Count}}
+\index{get\+Col\+Count@{get\+Col\+Count}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{get\+Col\+Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int open\+Mind\+::math\+::\+Matrix\+::get\+Col\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_a77aed5a66ee4b1be653e78a147cea85b}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_afe8cd77ce42f8b9bb0c71c09f110f4c7}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!get\+Column@{get\+Column}}
+\index{get\+Column@{get\+Column}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{get\+Column}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} open\+Mind\+::math\+::\+Matrix\+::get\+Column (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_afe8cd77ce42f8b9bb0c71c09f110f4c7}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_ac715d1ae670ca0a58d6ad77958dba814}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!get\+Row@{get\+Row}}
+\index{get\+Row@{get\+Row}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{get\+Row}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} open\+Mind\+::math\+::\+Matrix\+::get\+Row (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_ac715d1ae670ca0a58d6ad77958dba814}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a1f73721fe2824cdacb6f7af157621561}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!get\+Row\+Count@{get\+Row\+Count}}
+\index{get\+Row\+Count@{get\+Row\+Count}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{get\+Row\+Count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int open\+Mind\+::math\+::\+Matrix\+::get\+Row\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_a1f73721fe2824cdacb6f7af157621561}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a70cc7f8934cb5f3298135f31137e5fa0}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!is\+Vector@{is\+Vector}}
+\index{is\+Vector@{is\+Vector}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{is\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}bool open\+Mind\+::math\+::\+Matrix\+::is\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_a70cc7f8934cb5f3298135f31137e5fa0}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_afb4e025f38dfd297dfa9d502ff711b85}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!is\+Zero@{is\+Zero}}
+\index{is\+Zero@{is\+Zero}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{is\+Zero}]{\setlength{\rightskip}{0pt plus 5cm}bool open\+Mind\+::math\+::\+Matrix\+::is\+Zero (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_afb4e025f38dfd297dfa9d502ff711b85}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a25fc9903b13803b93056f3e823feb835}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} open\+Mind\+::math\+::\+Matrix\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a25fc9903b13803b93056f3e823feb835}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a152466da10b2bc6d675c6a0cdaeebaa2}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} open\+Mind\+::math\+::\+Matrix\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix} \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a152466da10b2bc6d675c6a0cdaeebaa2}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a2cfce379d6cddcfa26e31b955922c90e}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} \& open\+Mind\+::math\+::\+Matrix\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a2cfce379d6cddcfa26e31b955922c90e}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a5ff127cb2653a33f6e659b327e347afc}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator$\ast$=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} \& open\+Mind\+::math\+::\+Matrix\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix} \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a5ff127cb2653a33f6e659b327e347afc}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a2718e2c4da026a84d768459939e79089}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} open\+Mind\+::math\+::\+Matrix\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix} \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a2718e2c4da026a84d768459939e79089}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a000b390ebb8fb9af8859023253df1eb0}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} \& open\+Mind\+::math\+::\+Matrix\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a000b390ebb8fb9af8859023253df1eb0}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_aea27f33793c79d874ddf7d334e3d63c3}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} \& open\+Mind\+::math\+::\+Matrix\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix} \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_aea27f33793c79d874ddf7d334e3d63c3}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_abfedb905902c2b10218a6e61980f42fc}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} \& open\+Mind\+::math\+::\+Matrix\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_abfedb905902c2b10218a6e61980f42fc}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a9137b8be9250fbf25505980ad5f0f539}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} \& open\+Mind\+::math\+::\+Matrix\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix} \&}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a9137b8be9250fbf25505980ad5f0f539}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a3c2f863cb867dc3ee52e9806c04ae32c}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator/@{operator/}}
+\index{operator/@{operator/}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} open\+Mind\+::math\+::\+Matrix\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a3c2f863cb867dc3ee52e9806c04ae32c}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_ad7cbc2685d02bed36204c8b40c2f721e}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} \& open\+Mind\+::math\+::\+Matrix\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_ad7cbc2685d02bed36204c8b40c2f721e}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a04d19b5568c543101a2053d2c400b2c5}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} \& open\+Mind\+::math\+::\+Matrix\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix} \&}]{m}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a04d19b5568c543101a2053d2c400b2c5}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a6d7ef90c143858bf74c4fc11e7ec633b}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!operator==@{operator==}}
+\index{operator==@{operator==}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool open\+Mind\+::math\+::\+Matrix\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix} \&}]{m}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_a6d7ef90c143858bf74c4fc11e7ec633b}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a6d44effc5284193d37308b8cb4395130}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!resize@{resize}}
+\index{resize@{resize}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{resize}]{\setlength{\rightskip}{0pt plus 5cm}void open\+Mind\+::math\+::\+Matrix\+::resize (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{rows, }
+\item[{unsigned int}]{cols}
+\end{DoxyParamCaption}
+)}}\label{classopen_mind_1_1math_1_1_matrix_a6d44effc5284193d37308b8cb4395130}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a15b18dbaa991db26b1efbcf347c65172}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!set@{set}}
+\index{set@{set}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void open\+Mind\+::math\+::\+Matrix\+::set (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row, }
+\item[{unsigned int}]{col, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classopen_mind_1_1math_1_1_matrix_a15b18dbaa991db26b1efbcf347c65172}
+
+
+Reimplemented in \hyperlink{classopen_mind_1_1math_1_1_bipolar_matrix_a1c0f974d78d94f9ddd877b6b15adaed1}{open\+Mind\+::math\+::\+Bipolar\+Matrix}, and \hyperlink{classopen_mind_1_1math_1_1_binary_matrix_a89e70c9b644961bf6ba9aee4091878f8}{open\+Mind\+::math\+::\+Binary\+Matrix}.
+
+\hypertarget{classopen_mind_1_1math_1_1_matrix_a34f7a0d6dbe7c9d6848e007268ccab13}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!to\+Vector@{to\+Vector}}
+\index{to\+Vector@{to\+Vector}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{to\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ double $>$ open\+Mind\+::math\+::\+Matrix\+::to\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_a34f7a0d6dbe7c9d6848e007268ccab13}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_aed8d62933076a5abad1263a99a2cb846}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!transpose@{transpose}}
+\index{transpose@{transpose}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{transpose}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} open\+Mind\+::math\+::\+Matrix\+::transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_aed8d62933076a5abad1263a99a2cb846}
+\hypertarget{classopen_mind_1_1math_1_1_matrix_ad567b12966ba791cc4158b02853615f1}{\index{open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}!vector\+Length@{vector\+Length}}
+\index{vector\+Length@{vector\+Length}!open\+Mind\+::math\+::\+Matrix@{open\+Mind\+::math\+::\+Matrix}}
+\subsubsection[{vector\+Length}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int open\+Mind\+::math\+::\+Matrix\+::vector\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classopen_mind_1_1math_1_1_matrix_ad567b12966ba791cc4158b02853615f1}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/open\+Mind/math/\hyperlink{_matrix_8h}{Matrix.\+h}\item 
+math/\hyperlink{_matrix_8cpp}{Matrix.\+cpp}\end{DoxyCompactItemize}
